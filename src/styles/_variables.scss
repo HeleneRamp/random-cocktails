@@ -1,1 +1,29 @@
-$bgHomePage:red;
+/*import font*/
+@import url('https://fonts.cdnfonts.com/css/cocktail');
+@import url('https://fonts.cdnfonts.com/css/hanalei');
+
+$fontApp-title: 'Hanalei', sans-serif;
+$fontApp:'Cocktail', sans-serif;
+
+/*font color & color*/
+$font-color:#154921;
+$font-header: #422B1D;
+
+$pimaryLight: #ece3dd;
+$primaryDark: #154921;
+$hover-link: #ffcb29;
+
+/*bg color*/
+$bgBody:#ece3dd;
+$bgBodyImg: url('../../public/beach-texture-2.jpg');
+$bgHeader:#abddc4;
+
+$bgCardOne:#ff9a95;
+$bgCardTwo: #c9eded;
+$bgCardThree: #abddc4;
+
+/*shadow*/
+$shadow: 1px 8px 15px 0px #6f6d6d;
+$shadow-dark: 1px 1px 1px #000000;
+$shadow-logo: drop-shadow(1px 1px 4px black);
+

@@ -1,0 +1,70 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $bgHeader;
+  text-align: center;
+  padding-inline: 2rem;
+  padding-block: .5rem;
+  img {
+    padding-top: 0.2rem;
+    margin-right: 9.375rem;
+    filter: $shadow-logo;
+  }
+  h1{
+    height: 4rem;
+      font-family: $fontApp-title;
+      font-size: xxx-large;
+      background: $pimaryLight;
+      padding-inline: 1.2rem;
+      border: 3px ridge #154921bd;
+      border-radius: 6.25rem 0 6.25rem 0;
+      @include flex-center;
+  }
+}
+
+.navbar__container--links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  a {
+    position: relative;
+    font-size: large;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      border-radius: 5px;
+      height: 0.08rem;
+      box-shadow: $shadow-dark;
+      bottom: 0;
+      left: 0;
+      background: $hover-link;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    &:hover {
+      text-shadow: $shadow-dark;
+      color: $hover-link;
+    }
+  }
+}
+.bgImage__container {
+  width: 100%;
+  height: 24.7rem;
+  background: $bgHeader;
+  background-image: url('../../public/bg-image.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 0.5rem solid $bgHeader;
+  img {
+    width: 100%;
+  }
+}
