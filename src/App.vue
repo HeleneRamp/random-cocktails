@@ -3,14 +3,14 @@
     <NavBar />
   </header>
   <main>
-    <h1>Hello World !</h1>
-    <CocktailCard />
+    <!-- <CocktailCard /> -->
+    <router-view></router-view>
   </main>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue'
-import CocktailCard from './components/CocktailCard.vue'
+// import CocktailCard from './components/CocktailCard.vue'
 </script>
 
 <style lang="scss"></style>

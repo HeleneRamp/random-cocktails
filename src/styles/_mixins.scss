@@ -10,3 +10,12 @@
     border-radius: 1rem;
     padding: .5rem;
 }
+@mixin box-title{
+    text-align: center;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    margin-top: 4rem;
+    border-left: 4px solid $primaryDark;
+    border-right: 4px solid $primaryDark;
+    border-radius: 1rem;
+    background-color: #ff9a957f;
+}

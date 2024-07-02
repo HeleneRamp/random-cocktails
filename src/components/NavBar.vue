@@ -1,21 +1,19 @@
 <template>
     <div class="navbar__container">
-        <!-- <div class="navbar__container--tLeft"> -->
-            <!-- <div> -->
-                <img src="../../public/coconut.png" alt="logo">
-            <!-- </div> -->
-            <!-- <div> -->
-                <h1>Mix Master Mystery</h1>
-            <!-- </div> -->
-        <!-- </div> -->
+        <router-link to="/">
+            <img src="../../public/coconut.png" alt="logo">
+        </router-link>
+        <router-link to="/">
+            <h1>Mix Master Mystery</h1>
+        </router-link>
         <div class="navbar__container--links">
-            <a href="#">All Cocktails</a>
-            <a href="#">All Mocktails</a>
+            <ul>
+                <li><router-link to="/all-cocktails">All Cocktails</router-link></li>
+                <li><router-link to="/all-mocktails">All Mocktails</router-link></li>
+            </ul>
         </div> 
     </div>
-    <div class="bgImage__container">
-        <!-- <img src="../../public/bg-image.png" alt="cocktails on the beach"> -->
-    </div>  
+   
 </template>
 
 <script>

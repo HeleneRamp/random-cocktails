@@ -1,17 +1,22 @@
 <template>
+    <div class="bgImage__container"></div>
     <div class="all__CocktailCard--container">
+        <h2>
+            Fancy a surprise cocktail?<br> 
+            Refresh the page to discover three new random creations and let the magic of flavors surprise you every time!
+        </h2>
         <figure class="cocktailCard__container" v-for="cocktail in cocktails" :key="cocktail.idDrink" >
-                <a href="#">
-                <img :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink"/>
+            <router-link :to="{ path: `/cocktail/${cocktail.idDrink}` }">
+                <img class="cocktail-img" :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink"/>
                 <figcaption>
-                    <img src="../../public/icons/sunny.svg" alt="sun-icon">
+                    <img class src="../../public/icons/sunny.svg" alt="sun-icon">
                         <h2>
-                            Cocktail<br>
+                            {{ cocktail.strAlcoholic === 'Alcoholic' ? 'Cocktail' : 'Mocktail' }}<br>
                             {{  cocktail.strDrink }}
                         </h2>
-                    <img src="../../public/icons/sunny.svg" alt="sun-icon">
+                    <img  src="../../public/icons/sunny.svg" alt="sun-icon">
                 </figcaption>
-            </a>
+            </router-link>
             </figure>
     </div>
 </template>

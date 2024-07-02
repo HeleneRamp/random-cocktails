@@ -11,12 +11,16 @@
     }
 }
 body{
-    background-color: $bgBody;
     background-image: $bgBodyImg;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 1920px;
+    overflow-x: hidden;
 }
+
 main{
-    padding-inline: .5rem;
     padding-bottom: 4rem;
 }
+  @media screen and (max-width: 700px) {
+ 
+  }
