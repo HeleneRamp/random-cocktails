@@ -1,0 +1,76 @@
+.cocktailDetail{
+    padding-inline: 1rem;
+}
+.cocktailDetail__row{
+   @include flex-center;
+   gap: 4rem;
+   flex-wrap: wrap;
+}
+.cocktailDetail__title{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    h1{
+    @include box-title;
+    padding-block: 2rem;
+    }
+}
+.cocktaiDetail__img--container{
+    img{
+        width: 30rem;
+        border-radius: 1rem;
+        border: 10px solid $bgCardThree;
+    }
+}
+.cocktailDetail__column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+.cocktailDetail__ingr--box{
+    width: 18rem;
+    background: #ede4de81;
+    padding: 1rem 2rem 1rem 2rem;
+    line-height: 2rem;
+    border: 10px solid $bgCardTwo;
+    border-radius: 1rem;
+    height: auto;
+    h2{
+        padding-bottom: 1rem;
+    }
+}
+.cocktailDetail__instruct--box{
+    width: 40rem;
+    background: #ede4de81;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 10px solid $bgCardOne;
+    border-radius: 1rem;
+    line-height: 1.5rem;
+    h2{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .cocktailDetail__title{
+        h1{
+            margin-top: 3rem;
+            font-size:x-large;
+        }
+    }
+    .cocktailDetail__row{
+        gap: 1rem;
+    }
+    .cocktaiDetail__img--container{
+        img{
+            width: 20rem;
+        }
+    }
+    .cocktailDetail__instruct--box, .cocktailDetail__ingr--box{
+        width: 18em;
+        padding-inline: 1rem;
+    
+    }
+}

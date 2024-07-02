@@ -15,7 +15,7 @@
     height: 4rem;
       font-family: $fontApp-title;
       font-size: xxx-large;
-      background: $pimaryLight;
+      background-image: $bgBodyImg;
       padding-inline: 1.2rem;
       border: 3px ridge #154921bd;
       border-radius: 6.25rem 0 6.25rem 0;
@@ -58,6 +58,15 @@
   }
 }
 }
+@media screen and (max-width: 1024px) {
+  .navbar__container{
+    h1{
+      font-size: xx-large;
+      padding-block: .8rem;
+    }
+  }
+}
+
 @media screen and (max-width: 700px) {
    .navbar__container{
     padding-inline: .2rem;
@@ -66,13 +75,16 @@
         margin-right: 0;
     }
     h1{
+      padding-block: 0;
         font-size:x-large;
     }
    } 
    .navbar__container--links{
-    flex-direction: column;
-    gap: 1.4rem;
-    ul li{
+     ul{
+      flex-direction: column;
+      gap: 1.4rem;
+      padding-left: 0;
+    } li a{
         font-size: medium;
     }
    }

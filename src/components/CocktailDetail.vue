@@ -1,15 +1,36 @@
 <template>
-  <h1>CocktailDetail page</h1>
-  <div v-if="cocktail">
-    <h1>{{ cocktail.strDrink }}</h1>
-    <img :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink" width="200" />
-    <p>{{ cocktail.strInstructions }}</p>
-    <p>{{ cocktail.strGlass }}</p>
-    <ul>
-      <li v-for="item in ingredientsWithMeasures" :key="item.ingredient">
-        {{ item.measure }} {{ item.ingredient }}
-      </li>
-    </ul>
+ 
+  <div class="cocktailDetail"  v-if="cocktail">
+    <div class="cocktailDetail__title">
+      <h1>How to make the "{{ cocktail.strDrink }}"</h1>
+    </div>
+    <div class="cocktailDetail__row">
+      <div class="cocktaiDetail__img--container">
+        <img :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink" />
+      </div>
+        <div class="cocktailDetail__column">
+          <div class="cocktailDetail__ingr--box">
+            <h2>Accessories & ingredients</h2>
+            <ul>
+              <li>
+                <img src="../../public/cocktail-icon.svg" alt="glass-icon">
+                {{ cocktail.strGlass }}
+              </li>
+              <li v-for="item in ingredientsWithMeasures" :key="item.ingredient">
+                {{ item.measure }} {{ item.ingredient }}
+              </li>
+            </ul>
+          </div>
+          <div class="cocktailDetail__instruct--box">
+            <h2>Instructions</h2>
+            <p>
+              {{ cocktail.strInstructions }}<br>
+              CHEERS!!
+              <img src="../../public/cheers.svg" alt="cheers-icon">
+            </p>
+          </div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -44,5 +65,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/cocktailsDetails.scss';
+@import '../styles/cocktailDetail.scss';
 </style>
