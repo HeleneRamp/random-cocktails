@@ -4,7 +4,7 @@
             <img src="../../public/coconut.png" alt="logo">
         </router-link>
         <router-link to="/">
-            <h1>Mix Master Mystery</h1>
+            <h1>Cocktail Adventure</h1>
         </router-link>
         <div class="navbar__container--links">
             <ul>
