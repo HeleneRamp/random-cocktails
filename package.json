@@ -12,8 +12,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "flush-promises": "^1.0.2",
     "vue": "^3.4.29",
-    "vue-router": "^4.4.0"
+    "vue-router": "^4.4.0",
+    "whatwg-fetch": "^3.6.20"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
