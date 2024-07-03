@@ -1,18 +1,15 @@
 <template>
+  <header>
+    <NavBar />
+  </header>
   <main>
-    <h1>Hello World !</h1>
+    <router-view></router-view>
   </main>
+  <footer></footer>
 </template>
 
 <script setup>
-
+import NavBar from './components/NavBar.vue'
 </script>
 
-<style lang="scss">
-h1{
-  @include flex-center;
-  font-weight: bolder;
-  color: darkblue;
-}
-
-</style>
+<style lang="scss"></style>

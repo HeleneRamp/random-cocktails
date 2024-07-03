@@ -1,6 +1,27 @@
 @import './base.scss';
 
+*{
+    font-family: $fontApp;
+    color: $font-color;
+    a{
+        text-decoration: none;
+    }
+    h1, h2, h2, h4, h5, ul, p, figure{
+        margin: 0;
+    }
+}
 body{
+    background-image: $bgBodyImg;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+    // max-width: 1920px;
+    overflow-x: hidden;
+}
+
+main{
+    padding-bottom: 4rem;
+}
+footer{
+    height: 3rem;
+    background: $bgHeader;
 }

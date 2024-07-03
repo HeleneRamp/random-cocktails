@@ -1,0 +1,91 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $bgHeader;
+  text-align: center;
+  padding-inline: 2rem;
+  padding-block: .5rem;
+  img {
+    padding-top: 0.2rem;
+    margin-right: 9.375rem;
+    filter: $shadow-logo;
+  }
+  h1{
+    height: 4rem;
+      font-family: $fontApp-title;
+      font-size: xxx-large;
+      background-image: $bgBodyImg;
+      padding-inline: 1.2rem;
+      border: 3px ridge #154921bd;
+      border-radius: 6.25rem 0 6.25rem 0;
+      @include flex-center;
+  }
+}
+
+.navbar__container--links {
+  display: flex;
+  align-items: center;
+  ul {
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+  li a{
+    position: relative;
+    font-size: large;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      border-radius: 5px;
+      height: 0.08rem;
+      box-shadow: $shadow-dark;
+      bottom: 0;
+      left: 0;
+      background: $hover-link;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    &:hover {
+      text-shadow: $shadow-dark;
+      color: $hover-link;
+    }
+  }
+}
+}
+@media screen and (max-width: 1024px) {
+  .navbar__container{
+    h1{
+      font-size: xx-large;
+      padding-block: .8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+   .navbar__container{
+    padding-inline: .2rem;
+    img{
+        width: 70px;
+        margin-right: 0;
+    }
+    h1{
+      padding-block: 0;
+        font-size:x-large;
+    }
+   } 
+   .navbar__container--links{
+     ul{
+      flex-direction: column;
+      gap: 1.4rem;
+      padding-left: 0;
+    } li a{
+        font-size: medium;
+    }
+   }
+}
